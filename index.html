@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TM28500 | Taller de coches deportivos en Arganda del Rey</title>
+<meta name="description" content="TM28500: taller especializado en coches deportivos y de alta gama en Arganda del Rey. Mecánica, diagnosis, frenos, suspensión, preparación y estética.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+tailwind.config = {
+  theme: { extend: {
+    colors: { ink:'#0a0b0d', coal:'#121418', steel:'#1b1e24', line:'#2a2e36', mist:'#9aa3b2', chalk:'#eef1f5', race:'#ff3b1f', raceDark:'#d92a10' },
+    fontFamily: { display:['"Chakra Petch"','sans-serif'], sans:['Inter','sans-serif'] }
+  } }
+}
+</script>
+<style>
+  body{background:#0a0b0d}
+  .grain{background-image:radial-gradient(rgba(255,255,255,.035) 1px,transparent 1px);background-size:3px 3px}
+  .stripe{background:repeating-linear-gradient(-45deg,#ff3b1f 0 10px,transparent 10px 20px)}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.on{opacity:1;transform:none}
+  .input{width:100%;background:#121418;border:1px solid #2a2e36;border-radius:12px;padding:.85rem 1rem;color:#eef1f5;outline:none;transition:border-color .2s}
+  .input:focus{border-color:#ff3b1f}
+  .input::placeholder{color:#5f6775}
+  .marquee{animation:marquee 30s linear infinite}
+  @keyframes marquee{to{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion:reduce){.marquee{animation:none}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body class="font-sans text-chalk antialiased">
+
+<!-- Aviso boceto -->
+<div class="bg-race text-ink text-center text-xs font-semibold tracking-wide py-2 px-4">BOCETO · Textos, opiniones y datos de contacto de ejemplo</div>
+
+<!-- NAV -->
+<header id="nav" class="sticky top-0 z-40 transition-colors duration-300">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+    <a href="#inicio" class="font-display font-bold text-xl tracking-wider">TM<span class="text-race">28500</span></a>
+    <nav class="hidden md:flex items-center gap-8 text-sm text-mist">
+      <a href="#servicios" class="hover:text-chalk">Servicios</a>
+      <a href="#configurador" class="hover:text-chalk">Configurador 3D</a>
+      <a href="#proceso" class="hover:text-chalk">Cómo trabajamos</a>
+      <a href="#opiniones" class="hover:text-chalk">Opiniones</a>
+      <a href="#donde" class="hover:text-chalk">Dónde estamos</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="#cita" class="hidden sm:inline-flex bg-race hover:bg-raceDark text-ink font-semibold text-sm px-5 py-2.5 rounded-full transition">Pedir cita</a>
+      <button id="menuBtn" class="md:hidden w-10 h-10 grid place-items-center rounded-full border border-line" aria-label="Abrir menú">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="menu" class="hidden md:hidden border-t border-line bg-coal">
+    <a href="#servicios" class="block px-6 py-3 hover:bg-steel">Servicios</a>
+    <a href="#configurador" class="block px-6 py-3 hover:bg-steel">Configurador 3D</a>
+    <a href="#proceso" class="block px-6 py-3 hover:bg-steel">Cómo trabajamos</a>
+    <a href="#opiniones" class="block px-6 py-3 hover:bg-steel">Opiniones</a>
+    <a href="#cita" class="block px-6 py-3 text-race font-semibold hover:bg-steel">Pedir cita</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="inicio" class="relative -mt-16 min-h-[92vh] flex items-end overflow-hidden">
+  <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?w=2000&q=75&auto=format&fit=crop" alt="Deportivo blanco en carretera de montaña" class="absolute inset-0 w-full h-full object-cover object-[50%_60%]">
+  <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-ink/20"></div>
+  <div class="absolute inset-0 bg-gradient-to-r from-ink via-ink/60 to-transparent"></div>
+  <div class="absolute inset-0 bg-ink/45 sm:hidden"></div>
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 pb-16 pt-40 w-full">
+    <p class="inline-flex items-center gap-2 text-xs tracking-[0.3em] uppercase text-race font-semibold">
+      <span class="w-8 h-px bg-race"></span> Arganda del Rey · Madrid
+    </p>
+    <h1 class="font-display font-bold mt-5 text-5xl sm:text-6xl md:text-7xl leading-[0.95] max-w-3xl">
+      Tu deportivo, en manos <span class="text-race">de especialistas</span>
+    </h1>
+    <p class="mt-6 text-lg text-mist max-w-xl leading-relaxed">
+      Mecánica, diagnosis, frenos, suspensión y preparación para coches deportivos y de alta gama. Con la precisión que tu coche pide y la cercanía de un taller de barrio.
+    </p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="#cita" class="bg-race hover:bg-raceDark text-ink font-semibold px-7 py-3.5 rounded-full transition">Reservar cita</a>
+      <a href="#configurador" class="border border-chalk/30 hover:border-chalk px-7 py-3.5 rounded-full transition">Probar el configurador 3D</a>
+    </div>
+    <dl class="mt-14 grid grid-cols-3 max-w-xl border-t border-line pt-6 gap-4">
+      <div><dt class="text-xs text-mist uppercase tracking-wider">Experiencia</dt><dd class="font-display text-3xl font-bold mt-1">15 años</dd></div>
+      <div><dt class="text-xs text-mist uppercase tracking-wider">Coches al año</dt><dd class="font-display text-3xl font-bold mt-1">+900</dd></div>
+      <div><dt class="text-xs text-mist uppercase tracking-wider">Valoración</dt><dd class="font-display text-3xl font-bold mt-1">4,9 ★</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- MARCAS -->
+<div class="border-y border-line bg-coal overflow-hidden py-5">
+  <div class="marquee flex w-max gap-14 font-display text-xl tracking-[0.25em] text-mist/70 uppercase whitespace-nowrap">
+    <span>Porsche</span><span class="text-race">/</span><span>BMW M</span><span class="text-race">/</span><span>Audi RS</span><span class="text-race">/</span><span>Mercedes-AMG</span><span class="text-race">/</span><span>Ferrari</span><span class="text-race">/</span><span>Lamborghini</span><span class="text-race">/</span><span>Maserati</span><span class="text-race">/</span><span>Cupra</span><span class="text-race">/</span>
+    <span>Porsche</span><span class="text-race">/</span><span>BMW M</span><span class="text-race">/</span><span>Audi RS</span><span class="text-race">/</span><span>Mercedes-AMG</span><span class="text-race">/</span><span>Ferrari</span><span class="text-race">/</span><span>Lamborghini</span><span class="text-race">/</span><span>Maserati</span><span class="text-race">/</span><span>Cupra</span><span class="text-race">/</span>
+  </div>
+</div>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="py-24 px-4 sm:px-6 grain">
+  <div class="max-w-6xl mx-auto">
+    <div class="reveal flex flex-col md:flex-row md:items-end justify-between gap-6">
+      <div>
+        <p class="text-xs tracking-[0.3em] uppercase text-race font-semibold">Servicios</p>
+        <h2 class="font-display font-bold mt-3 text-4xl md:text-5xl max-w-xl">Todo lo que tu coche necesita, bajo un mismo techo</h2>
+      </div>
+      <p class="text-mist max-w-sm">Trabajamos con equipos de diagnosis oficiales y recambio original o de primeras marcas, manteniendo la garantía de tu vehículo.</p>
+    </div>
+
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <article class="reveal group bg-coal border border-line rounded-3xl p-7 hover:border-race/60 transition">
+        <div class="w-12 h-12 rounded-2xl bg-race/10 text-race grid place-items-center"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div>
+        <h3 class="font-display text-2xl font-semibold mt-6">Mecánica y mantenimiento</h3>
+        <p class="mt-3 text-mist leading-relaxed">Revisiones según plan del fabricante, distribución, embragues y cambios PDK/DSG. Sello en el libro de mantenimiento.</p>
+      </article>
+      <article class="reveal group bg-coal border border-line rounded-3xl p-7 hover:border-race/60 transition">
+        <div class="w-12 h-12 rounded-2xl bg-race/10 text-race grid place-items-center"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M7 20h10M9 16v4M15 16v4M7 11l2-3 3 4 2-2 3 3"/></svg></div>
+        <h3 class="font-display text-2xl font-semibold mt-6">Diagnosis electrónica</h3>
+        <p class="mt-3 text-mist leading-relaxed">Lectura y borrado de averías, codificaciones y actualizaciones de software con equipos específicos de cada marca.</p>
+      </article>
+      <article class="reveal group bg-coal border border-line rounded-3xl p-7 hover:border-race/60 transition">
+        <div class="w-12 h-12 rounded-2xl bg-race/10 text-race grid place-items-center"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div>
+        <h3 class="font-display text-2xl font-semibold mt-6">Frenos y suspensión</h3>
+        <p class="mt-3 text-mist leading-relaxed">Discos carbocerámicos, pinzas, coilovers y sistemas lift. Ajuste de alturas y paralelo con reglaje para circuito o calle.</p>
+      </article>
+      <article class="reveal group bg-coal border border-line rounded-3xl p-7 hover:border-race/60 transition">
+        <div class="w-12 h-12 rounded-2xl bg-race/10 text-race grid place-items-center"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
+        <h3 class="font-display text-2xl font-semibold mt-6">Preparación y potencia</h3>
+        <p class="mt-3 text-mist leading-relaxed">Reprogramaciones Stage 1 y 2, escapes deportivos y admisión, con medición en banco de potencia antes y después.</p>
+      </article>
+      <article class="reveal group bg-coal border border-line rounded-3xl p-7 hover:border-race/60 transition">
+        <div class="w-12 h-12 rounded-2xl bg-race/10 text-race grid place-items-center"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4"/></svg></div>
+        <h3 class="font-display text-2xl font-semibold mt-6">Neumáticos y llantas</h3>
+        <p class="mt-3 text-mist leading-relaxed">Montaje sin contacto para llantas de gran diámetro, equilibrado de precisión y reparación de llantas.</p>
+      </article>
+      <article class="reveal group bg-coal border border-line rounded-3xl p-7 hover:border-race/60 transition">
+        <div class="w-12 h-12 rounded-2xl bg-race/10 text-race grid place-items-center"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="m12 3 2.5 5 5.5.8-4 3.9.9 5.5L12 15.6 7.1 18.2l.9-5.5-4-3.9 5.5-.8z"/></svg></div>
+        <h3 class="font-display text-2xl font-semibold mt-6">Estética y protección</h3>
+        <p class="mt-3 text-mist leading-relaxed">Detailing, tratamiento cerámico, PPF, vinilado de color y tintado de lunas homologado.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONFIGURADOR -->
+<section id="configurador" class="py-24 px-4 sm:px-6 bg-coal border-y border-line">
+  <div class="max-w-6xl mx-auto">
+    <div class="reveal grid md:grid-cols-2 gap-8 items-end">
+      <div>
+        <p class="text-xs tracking-[0.3em] uppercase text-race font-semibold">Configurador 3D</p>
+        <h2 class="font-display font-bold mt-3 text-4xl md:text-5xl">Imagina tu proyecto antes de entrar al taller</h2>
+      </div>
+      <p class="text-mist leading-relaxed">Prueba colores de vinilo, el tono del tintado de lunas y la altura de la suspensión sobre un 911 GT3 en 3D. Gíralo con el ratón o el dedo y tráenos la idea: nosotros la hacemos realidad.</p>
+    </div>
+    <div class="reveal mt-12 relative rounded-3xl overflow-hidden border border-line bg-ink aspect-[4/5] sm:aspect-[16/10] lg:aspect-[16/9]">
+      <div id="cfgCover" class="absolute inset-0 z-10 grid place-items-center">
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600&q=70&auto=format&fit=crop" alt="" class="absolute inset-0 w-full h-full object-cover opacity-40">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink to-ink/40"></div>
+        <button id="cfgStart" class="relative flex flex-col items-center gap-4 group">
+          <span class="w-20 h-20 rounded-full bg-race text-ink grid place-items-center shadow-[0_0_60px_rgba(255,59,31,.5)] group-hover:scale-105 transition">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </span>
+          <span class="font-display text-xl tracking-wider">Abrir configurador 3D</span>
+          <span class="text-sm text-mist">Carga unos 17 MB</span>
+        </button>
+      </div>
+      <iframe id="cfgFrame" title="Configurador 3D" class="absolute inset-0 w-full h-full" loading="lazy" allow="fullscreen"></iframe>
+    </div>
+    <div class="mt-5 flex flex-wrap items-center justify-between gap-3 text-sm text-mist">
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 rounded-full border border-line">12 colores + personalizado</span>
+        <span class="px-3 py-1.5 rounded-full border border-line">Tintado 0–100 %</span>
+        <span class="px-3 py-1.5 rounded-full border border-line">Suspensión −60 / +80 mm</span>
+      </div>
+      <a href="configurador.html" target="_blank" class="text-chalk hover:text-race underline underline-offset-4">Abrir a pantalla completa ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section id="proceso" class="py-24 px-4 sm:px-6">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
+    <div class="reveal relative">
+      <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1200&q=70&auto=format&fit=crop" alt="Mecánico trabajando en un motor" class="w-full aspect-[4/5] object-cover rounded-3xl">
+      <div class="absolute -bottom-6 -right-2 sm:-right-6 bg-race text-ink rounded-2xl px-6 py-5 shadow-2xl">
+        <p class="font-display text-4xl font-bold leading-none">24 h</p>
+        <p class="text-sm font-medium mt-1">Presupuesto cerrado</p>
+      </div>
+    </div>
+    <div>
+      <p class="reveal text-xs tracking-[0.3em] uppercase text-race font-semibold">Cómo trabajamos</p>
+      <h2 class="reveal font-display font-bold mt-3 text-4xl md:text-5xl">Sin sorpresas, de la recepción a la entrega</h2>
+      <ol class="mt-10 space-y-7">
+        <li class="reveal flex gap-5"><span class="font-display text-race text-2xl font-bold w-10 shrink-0">01</span><div><h3 class="font-display text-xl font-semibold">Recepción y diagnóstico</h3><p class="text-mist mt-1">Revisamos el coche contigo y hacemos una diagnosis completa.</p></div></li>
+        <li class="reveal flex gap-5"><span class="font-display text-race text-2xl font-bold w-10 shrink-0">02</span><div><h3 class="font-display text-xl font-semibold">Presupuesto detallado</h3><p class="text-mist mt-1">Te lo enviamos por WhatsApp en menos de 24 h, pieza a pieza.</p></div></li>
+        <li class="reveal flex gap-5"><span class="font-display text-race text-2xl font-bold w-10 shrink-0">03</span><div><h3 class="font-display text-xl font-semibold">Reparación con seguimiento</h3><p class="text-mist mt-1">Fotos y vídeos del proceso para que veas cada paso.</p></div></li>
+        <li class="reveal flex gap-5"><span class="font-display text-race text-2xl font-bold w-10 shrink-0">04</span><div><h3 class="font-display text-xl font-semibold">Prueba y entrega</h3><p class="text-mist mt-1">Prueba en carretera, lavado de cortesía y 12 meses de garantía.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section class="px-4 sm:px-6 pb-24">
+  <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+    <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&q=70&auto=format&fit=crop" alt="Detalle de motor" class="reveal w-full aspect-square object-cover rounded-3xl">
+    <img src="https://images.unsplash.com/photo-1611821064430-0d40291d0f0b?w=800&q=70&auto=format&fit=crop" alt="Deportivo gris en carretera" class="reveal w-full aspect-square object-cover rounded-3xl md:translate-y-8">
+    <img src="https://images.unsplash.com/photo-1632245889029-e406faaa34cd?w=800&q=70&auto=format&fit=crop" alt="Descapotable amarillo" class="reveal w-full aspect-square object-cover rounded-3xl">
+    <img src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=800&q=70&auto=format&fit=crop" alt="Mecánico revisando un motor" class="reveal w-full aspect-square object-cover rounded-3xl md:translate-y-8">
+  </div>
+</section>
+
+<!-- OPINIONES -->
+<section id="opiniones" class="py-24 px-4 sm:px-6 bg-coal border-y border-line">
+  <div class="max-w-6xl mx-auto">
+    <div class="reveal text-center">
+      <p class="text-xs tracking-[0.3em] uppercase text-race font-semibold">Opiniones</p>
+      <h2 class="font-display font-bold mt-3 text-4xl md:text-5xl">Lo que dicen nuestros clientes</h2>
+      <p class="mt-4 text-mist">4,9 de media · Opiniones de ejemplo</p>
+    </div>
+    <div class="mt-14 grid md:grid-cols-3 gap-5">
+      <figure class="reveal bg-ink border border-line rounded-3xl p-7 flex flex-col gap-4">
+        <p class="text-race tracking-widest">★★★★★</p>
+        <blockquote class="leading-relaxed">“Llevé mi Cayman por un ruido en la suspensión y me lo explicaron todo con vídeos. Precio cerrado y en dos días listo.”</blockquote>
+        <figcaption class="mt-auto text-sm text-mist">Javier M. · Porsche Cayman S</figcaption>
+      </figure>
+      <figure class="reveal bg-ink border border-line rounded-3xl p-7 flex flex-col gap-4">
+        <p class="text-race tracking-widest">★★★★★</p>
+        <blockquote class="leading-relaxed">“Stage 1 y escape en mi RS3. Me enseñaron la gráfica del banco antes y después. Se nota que saben lo que hacen.”</blockquote>
+        <figcaption class="mt-auto text-sm text-mist">Laura G. · Audi RS3</figcaption>
+      </figure>
+      <figure class="reveal bg-ink border border-line rounded-3xl p-7 flex flex-col gap-4">
+        <p class="text-race tracking-widest">★★★★★</p>
+        <blockquote class="leading-relaxed">“Por fin un taller en Arganda donde tratan el coche como si fuera suyo. El mantenimiento del M4, impecable.”</blockquote>
+        <figcaption class="mt-auto text-sm text-mist">Sergio R. · BMW M4</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- CITA + HORARIO -->
+<section id="cita" class="py-24 px-4 sm:px-6 grain">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-5 gap-10">
+    <div class="lg:col-span-2 reveal">
+      <p class="text-xs tracking-[0.3em] uppercase text-race font-semibold">Cita previa</p>
+      <h2 class="font-display font-bold mt-3 text-4xl md:text-5xl">Reserva tu hueco en el taller</h2>
+      <p class="mt-4 text-mist leading-relaxed">Cuéntanos qué necesita tu coche y te confirmamos la cita por WhatsApp el mismo día.</p>
+
+      <div class="mt-10 bg-coal border border-line rounded-3xl p-7">
+        <h3 class="font-display text-xl font-semibold">Horario</h3>
+        <table class="w-full mt-4 text-sm">
+          <tr class="border-b border-line"><td class="py-3 text-mist">Lunes – Jueves</td><td class="py-3 text-right">8:30 – 14:00 · 15:30 – 19:00</td></tr>
+          <tr class="border-b border-line"><td class="py-3 text-mist">Viernes</td><td class="py-3 text-right">8:30 – 15:00</td></tr>
+          <tr class="border-b border-line"><td class="py-3 text-mist">Sábado</td><td class="py-3 text-right">Con cita previa</td></tr>
+          <tr><td class="py-3 text-mist">Domingo</td><td class="py-3 text-right text-race">Cerrado</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <form id="form" class="lg:col-span-3 reveal bg-coal border border-line rounded-3xl p-7 sm:p-9 grid sm:grid-cols-2 gap-4">
+      <label class="sm:col-span-1"><span class="text-sm text-mist">Nombre</span><input class="input mt-2" name="nombre" required placeholder="Tu nombre"></label>
+      <label class="sm:col-span-1"><span class="text-sm text-mist">Teléfono</span><input class="input mt-2" name="tel" type="tel" required placeholder="600 000 000"></label>
+      <label class="sm:col-span-1"><span class="text-sm text-mist">Marca y modelo</span><input class="input mt-2" name="coche" required placeholder="Ej. Porsche 911 Carrera"></label>
+      <label class="sm:col-span-1"><span class="text-sm text-mist">Servicio</span>
+        <select class="input mt-2" name="servicio">
+          <option>Mantenimiento / revisión</option><option>Diagnosis de avería</option><option>Frenos y suspensión</option>
+          <option>Preparación y potencia</option><option>Neumáticos y llantas</option><option>Estética y protección</option>
+        </select>
+      </label>
+      <label class="sm:col-span-2"><span class="text-sm text-mist">¿Qué le pasa a tu coche?</span><textarea class="input mt-2 min-h-[120px]" name="msg" placeholder="Cuéntanos con detalle"></textarea></label>
+      <div class="sm:col-span-2 flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-2">
+        <p class="text-xs text-mist">Al enviar aceptas que te contactemos para gestionar tu cita.</p>
+        <button class="bg-race hover:bg-raceDark text-ink font-semibold px-8 py-3.5 rounded-full transition">Solicitar cita</button>
+      </div>
+      <p id="ok" class="hidden sm:col-span-2 text-center bg-race/10 border border-race/40 text-chalk rounded-2xl py-4">✓ ¡Gracias! Te escribiremos por WhatsApp para confirmar la cita. (Demo)</p>
+    </form>
+  </div>
+</section>
+
+<!-- DÓNDE -->
+<section id="donde" class="pb-24 px-4 sm:px-6">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-5 gap-5">
+    <div class="md:col-span-2 reveal bg-coal border border-line rounded-3xl p-8 flex flex-col">
+      <p class="text-xs tracking-[0.3em] uppercase text-race font-semibold">Dónde estamos</p>
+      <h2 class="font-display font-bold mt-3 text-3xl">Arganda del Rey</h2>
+      <p class="mt-4 text-mist leading-relaxed">Pol. Industrial (dirección de ejemplo)<br>28500 Arganda del Rey, Madrid</p>
+      <p class="mt-3 text-mist">A 25 min de Madrid por la A-3, salida 22.</p>
+      <div class="mt-8 space-y-3">
+        <a href="tel:+34600000000" class="flex items-center gap-3 hover:text-race"><span class="w-10 h-10 rounded-full border border-line grid place-items-center">☎</span> 600 000 000</a>
+        <a href="#cita" class="flex items-center gap-3 hover:text-race"><span class="w-10 h-10 rounded-full border border-line grid place-items-center">✉</span> hola@tm28500.es</a>
+      </div>
+      <a href="https://www.google.com/maps/search/?api=1&query=Arganda+del+Rey" target="_blank" rel="noopener" class="mt-auto pt-8 text-race font-semibold hover:underline">Cómo llegar ↗</a>
+    </div>
+    <iframe class="md:col-span-3 reveal w-full min-h-[360px] rounded-3xl border border-line grayscale invert-[.9] contrast-[.9]" title="Mapa de Arganda del Rey" loading="lazy"
+      src="https://www.google.com/maps?q=Arganda+del+Rey&z=13&output=embed"></iframe>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-line">
+  <div class="stripe h-1.5 opacity-80"></div>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 flex flex-col md:flex-row gap-6 justify-between text-sm text-mist">
+    <div>
+      <p class="font-display font-bold text-xl text-chalk tracking-wider">TM<span class="text-race">28500</span></p>
+      <p class="mt-2">Taller de coches deportivos · Arganda del Rey</p>
+    </div>
+    <div class="md:text-right">
+      <p>© 2026 TM28500 · Boceto de diseño</p>
+      <p class="mt-2 text-xs">Fotos: Unsplash · Modelo 3D "Porsche 911 GT3" por Outlaw Games (CC BY-NC 4.0)</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp flotante -->
+<a href="#cita" class="fixed bottom-5 right-5 z-40 w-14 h-14 rounded-full bg-[#25d366] grid place-items-center shadow-xl hover:scale-105 transition" aria-label="WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.4z"/></svg>
+</a>
+
+<script>
+  // menú móvil
+  const menu = document.getElementById('menu');
+  document.getElementById('menuBtn').onclick = () => menu.classList.toggle('hidden');
+  menu.querySelectorAll('a').forEach(a => a.onclick = () => menu.classList.add('hidden'));
+  // fondo del nav al hacer scroll
+  const nav = document.getElementById('nav');
+  addEventListener('scroll', () => { nav.classList.toggle('bg-ink/90', scrollY > 40); nav.classList.toggle('backdrop-blur', scrollY > 40); }, { passive:true });
+  // animaciones al aparecer
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { threshold:.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  // configurador: se carga solo al pulsar (pesa ~17 MB)
+  document.getElementById('cfgStart').onclick = () => {
+    document.getElementById('cfgFrame').src = 'configurador.html';
+    document.getElementById('cfgCover').remove();
+  };
+  // formulario (demo)
+  document.getElementById('form').onsubmit = e => {
+    e.preventDefault();
+    document.getElementById('ok').classList.remove('hidden');
+    e.target.reset();
+  };
+</script>
+</body>
+</html>
